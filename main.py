@@ -1,18 +1,7 @@
-import pymongo  
-client = pymongo.MongoClient("mongodb://localhost:27017")
+from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 
-db = client['mydatabase']
+llm = OpenAI()
+chat_model = ChatOpenAI()
 
-collection = db['db_collection']
-
-# data={
-#     "name":"abdul",
-#     "father_name":"akram",
-#     "nationalality":"Pakistani"
-    
-# }
-
-# information = collection.insert_one(data)
-information = collection.update_one({"name":"abdul"},{"$set":{"nationalality":"live on earth"}})
-info=collection.find_one({"name":"abdul"})
-print("Inserted document ID",information,info)
+llm.predict("hi")

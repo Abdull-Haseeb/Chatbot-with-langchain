@@ -1,0 +1,27 @@
+# Python specific
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Dependencies
+venv/
+*.egg-info/
+dist/
+build/
+*.egg
+*.egg-info
+*.pyc
+*.pyo
+__pycache__/
+*.so
+*.out
+
+# Editor/IDE specific
+.vscode/
+.idea/
+
+# Miscellaneous
+*.log
+.DS_Store
